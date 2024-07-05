@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+<h1>website</h1>
+<div id="banner"></div>
+<footer>
+    <p>footer</p>
+</footer>
+<script type="text/babel">
+    const Banner = () => {
+        const title = 'hello'
+        const subtitle = 'world'
+
+        // const handleClick = () => {
+        //     console.log('clicked')
+        // }
+
+        return (
+            <div className="banner ">
+                <h1>{title.toUpperCase()}</h1>
+                <p>{subtitle}</p>
+                <button onClick={() => console.log('clicked')}>Click</button>
+            </div>
+        )
+    }
+    ReactDOM.createRoot(document.querySelector('#banner')).render(<Banner/>)
+</script>
+</body>
+</html>
